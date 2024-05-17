@@ -1,0 +1,64 @@
+This is ASCII art for project Little Holland.
+
+██╗     ██╗████████╗████████╗██╗     ███████╗    ██╗  ██╗ ██████╗ ██╗     ██╗      █████╗ ███╗   ██╗██████╗ 
+██║     ██║╚══██╔══╝╚══██╔══╝██║     ██╔════╝    ██║  ██║██╔═══██╗██║     ██║     ██╔══██╗████╗  ██║██╔══██╗
+██║     ██║   ██║      ██║   ██║     █████╗      ███████║██║   ██║██║     ██║     ███████║██╔██╗ ██║██║  ██║
+██║     ██║   ██║      ██║   ██║     ██╔══╝      ██╔══██║██║   ██║██║     ██║     ██╔══██║██║╚██╗██║██║  ██║
+███████╗██║   ██║      ██║   ███████╗███████╗    ██║  ██║╚██████╔╝███████╗███████╗██║  ██║██║ ╚████║██████╔╝
+╚══════╝╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ 
+                                                                                                            
+
+Hey, my  friend! Today we start a project named Little Holland. This is one of the projects by SystematicLabs from 
+Estonia, Tallin. Idea and MVP develop by Vladimir Ovcharov and AI Assistant, welcome to the board, collegue!   
+We start from the scratch and This is your task. You create an description of this task: "Write a vst3 and AU2 
+plugins with simple framework interface shows number of midi notes being transfered to AI server and number of 
+notes transfered back to the current track. Each type of plugins (au2 and vst3) can be midi or audio. 
+In case of audio plugin it has to show number of data in Mb transfered in and out to AI server.   
+
+Beta testers are musicians with proven tracks in musical composing and songwriting. They are Subjective perciption 
+department and Deeps machine learning Crue. Thei task will be selecting music in contemporary electronic music and bonding 
+them to genres and create description of subjective insights that music brings in. The second part of beta tester's 
+job will be composing music to highlight the cases with "extra vibe states". This moment will be deassembled by the 
+analyser (the part of a development) to a smaller valuable pieces to make AI be able to recreate the the same conditions 
+and finally create a small piece of music which is separate instrument track in MIDI or in audio.
+
+What is Little Holland? Little Holland is a AI model based on LLM learned to generate MIDI or Audio track using 
+VST3/AU2 plugins connected to each track including master track, and sends all data via tcp/ip to AI server 
+https://littleholland.overtheworld.uk using API and UDP for realtime protocol transport. So, basically it can play any
+instrument inside given musical environment (key {Am,F#}, tune {minor, major, lidian, etc.}, rythme {straignt, swing,
+shuffle}, and control the output during change any of the parameters.  
+
+How it learns? It learns highly effective cause while adjusting midi parameters to achieve "zero state sound" or 
+writing a notes of the resulting feedback as a listener, aiming to create the same enviromental patterns using infinite combination 
+of musical instruments like synthesisors, samplers both software and hardware.
+
+How it compose music?
+It is a pure magic, we do not know how it works. It is a joke, no really.
+
+MVP includes: VST3 macos apple silicon plugin code, all descriptions and daemon app for linux arm64. VST3 do serialization of data, 
+open ip connection with server api, wait for data stream to begin then deserialise and store transmited midi data as a file {track name}.midi in folder 
+named as session-id {date + 3 random digits + client DAW id string), and file parameters.csv with parameters inluded in other fields.
+[5~ 
+Create single deploing script includes
+
+1. config file (littleholland.conf), declasre all input variables we use in app before it runs.
+2. README.md (Create project description using best practicies)
+ - create a annotation of a project, decribe one of the hardest challenges in AI is a music creation ability of a AI, because this is art with fuzzy rules and subjective perception which is crusual hurdle infront of the AI today.    
+ - subjective perception can be measured, can be formalised, but only replay, replay or repeat by the approach to the same environmental parameters which will be detected during the learning process
+3. Search related to Artificial Intellegence scientific articles in the archive.org and include in the README 20 of the most tangled with AI's ability to create music   
+4. Daemon app for Linux arm64 version. This is server app with secure API, constantly listens all availiable network interfaces 
+for requests from plugins.   
+5. Windows x32/x64 version. Generate code of VST3 plugin to transfer  MIDI via tcp/ip to server address littleholland.overtheworld.uk.
+6. MacOS Apple Silicon CPU version. Generate code of VST3 plugin to transfer  MIDI via tcp/ip to server address littleholland.overtheworld.uk. 
+7. Create a UML components diagram for plugin app
+8. All 
+8. Create deamon app for linux arm64.
+
+Use case: 
+
+Create server API description.
+Structure of received data:
+1. session id (indicates tracks of the same session and set users permissions)
+2. Real time Data type {midi, audio}
+3. Raw data
+
