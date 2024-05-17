@@ -7,14 +7,13 @@
 
 bool NetworkConnection::open(const std::string& serverAddress)
 {
-    // Placeholder implementation for opening a network connection
     std::cout << "Connecting to " << serverAddress << std::endl;
+    // Open socket and connect to the server (Placeholder implementation)
     return true;
 }
 
 void NetworkConnection::send(const std::vector<char>& data)
 {
-    // Placeholder implementation for sending data over network
+    // Send data over the network (Placeholder implementation)
     std::cout << "Sending data: " << std::string(data.begin(), data.end()) << std::endl;
 }
-
